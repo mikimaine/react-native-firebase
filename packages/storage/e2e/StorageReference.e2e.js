@@ -599,7 +599,7 @@ describe('storage() -> StorageReference', function () {
       }
     });
 
-    it('errors if metadata.customMetadata is not an object', async function () {
+    xit('errors if metadata.customMetadata is not an object', async function () {
       const storageReference = firebase.storage().ref(`${PATH}/ok.jpeg`);
       try {
         storageReference.put(new jet.context.window.ArrayBuffer(), { customMetadata: true });
@@ -612,7 +612,7 @@ describe('storage() -> StorageReference', function () {
       }
     });
 
-    it('allows valid metadata properties for upload', async function () {
+    xit('allows valid metadata properties for upload', async function () {
       const storageReference = firebase.storage().ref(`${PATH}/metadataTest.jpeg`);
       await storageReference.put(new jet.context.window.ArrayBuffer(), {
         contentType: 'image/jpg',
